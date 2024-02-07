@@ -7,7 +7,7 @@
 }
 
 button {
-  background: #6d74e3;
+  background: #F7D600;
   border: none;
 }
 
@@ -28,7 +28,7 @@ button {
 .wrapper li::before, button::before {
   position: absolute;
   content: '';
-  background: #6d74e3;
+  background: #F7D600;
   top: 0;
   left: -40px;
   width: 40px;
@@ -41,7 +41,7 @@ button {
 .wrapper li::after, button::after {
   position: absolute;
   content: '';
-  background: #6d74e3;
+  background: #F7D600;
   width: 200px;
   height: 40px;
   top: -40px;
@@ -52,15 +52,19 @@ button {
 }
 
 .wrapper li:nth-child(1)::after, .wrapper li:nth-child(1)::before {
-  background-color: #d8daf7;
+  background-color: #D50000;
 }
 
 .wrapper li:nth-child(2)::after, .wrapper li:nth-child(2)::before {
-  background-color: #c2c5f3;
+  background-color: #E50000;
 }
 
 .wrapper li:nth-child(3)::after, .wrapper li:nth-child(3)::before {
-  background-color: #989deb;
+  background-color: #E53400;
+}
+
+.wrapper li:nth-child(4)::after, .wrapper li:nth-child(4)::before {
+  background-color: #E57300;
 }
 
 li .input {
@@ -74,15 +78,19 @@ li .input::placeholder {
 }
 
 li:nth-child(1) .input {
-  background: #d8daf7;
+  background: #D50000;
 }
 
 li:nth-child(2) .input {
-  background: #c2c5f3;
+  background: #E50000;
 }
 
 li:nth-child(3) .input {
-  background: #989deb;
+  background: #E53400;
+}
+
+li:nth-child(4) .input {
+  background: #E57300;
 }
 
 
@@ -97,6 +105,11 @@ li:nth-child(2) .input:focus {
 }
 
 li:nth-child(3) .input:focus {
+  outline: none;
+  border: 3.5px solid #989deb;
+}
+
+li:nth-child(4) .input:focus {
   outline: none;
   border: 3.5px solid #989deb;
 }

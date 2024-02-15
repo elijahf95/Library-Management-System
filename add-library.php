@@ -4,7 +4,7 @@ $studentname = $_POST['studentname'];
 $booktitle = $_POST['booktitle'];
 $timeco = $_POST['timeco'];
 
-$conn = new mysqli("localhost", "LMS", "lib", "library_db");
+$conn = new mysqli("localhost", "root", "", "library_db");
 
 $sql = "INSERT INTO library (studentname, booktitle, timeco) VALUES ('".$studentname."', '".$booktitle."', '".$timeco."')";
 

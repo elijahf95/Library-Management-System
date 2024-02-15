@@ -1,17 +1,26 @@
 <?php
-
-$id = $_GET['id'];
-$studentname = $_POST['studentname'];
-$booktitle = $_POST['booktitle'];
-$timeco = $_POST['timeco'];
-
 $conn = new mysqli("localhost", "LMS", "lib", "library_db");
 
-$sql = "UPDATE library SET studentname='".$studentname . "',booktitle='".$booktitle."',timeco='".$timeco.'" WHERE id=".$id."";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['id'];
+    $studentname = $_POST['studentname'];
+    $booktitle = $_POST['booktitle'];
+    $timeco = $_POST['timeco'];
 
-$conn->query($sql);
+    // Use prepared statement to prevent SQL injection
+    $stmt = $conn->prepare("UPDATE library SET studentname=?, booktitle=?, timeco=? WHERE id=?");
+    $stmt->bind_param("ssssi", $studentname, $studentid, $booktitle, $timeco);
+    
+    if ($stmt->execute()) {
+        header("Location: index.php");
+    } else {
+        echo "Error updating record: " . $stmt->error;
+    }
 
-header('location: index.php');
+    $stmt->close();
+} else {
+    echo "Invalid request.";
+}
 
-
+$conn->close();
 ?>

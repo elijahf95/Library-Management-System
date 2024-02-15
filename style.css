@@ -125,4 +125,3 @@ button:hover, button:hover::before, button:hover::after {
 button:active {
   transform: translateX(0px);
 }
-

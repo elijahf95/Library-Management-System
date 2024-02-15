@@ -74,7 +74,6 @@ function getCurrentCount($conn) {
         <th>Action</th>
     </tr>
     <?php
-    // Assuming you have a database connection object named $conn
     $sql = "SELECT * FROM library";
     $result = $conn->query($sql);
     $id = getCurrentCount($conn);
@@ -82,25 +81,14 @@ function getCurrentCount($conn) {
         while ($row = $result->fetch_assoc()) {
             ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['studentname']; ?></td>
-                <td><?php echo $row['booktitle']; ?></td>
-                <td><?php echo $row['timeco']; ?></td>
-            </tr>
-            <?php
-        }
-    } else {
-        ?>
-        <tr>
-            <td colspan="4">No records found</td>
-        </tr>
-        <?php
-    }
-    ?>
-</table>
-
-		<a href="edit-library.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-info">Edit</a>
-		<style>
+    <td><?php echo $row['id']; ?></td>
+    <td><?php echo $row['studentname']; ?></td>
+    <td><?php echo $row['booktitle']; ?></td>
+    <td><?php echo $row['timeco']; ?></td>
+    <td>
+        <a href="edit-library.php?id=<?php echo $row['id']; ?>" class="button">Edit</a>
+        <a onclick="delete_library(<?php echo $row['id']; ?>)" href="#" class="btn btn-sm btn-danger">Delete</a>
+        <style>
 			a {
   position: relative;
   padding: 10px 20px;
@@ -172,16 +160,25 @@ a:active {
   -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
 }
-
-
 		</style>
-		<a onclick="delete_library(<?php echo $row['id']; ?>)" href="#" class="btn btn-sm btn-danger">Delete</a>
-	</td>
+    </td>
 </tr>
+            <?php
+        }
+    } else {
+        ?>
+        <tr>
+            <td colspan="4">No records found</td>
+        </tr>
+        <?php
+    }
+    ?>
+</table>
 <?php endwhile; ?>
 </tbody>
 </table>
 </div>
+
 
 </div>
 

@@ -37,10 +37,17 @@
                                 <input type="text" name="studentname" class="form-control" value="<?php echo $row['studentname']; ?>" required>
                             </div>
 
+<<<<<<< HEAD
 							<div class="mb-3">
     							<label for="studentid" class="form-label">Student ID:</label>
     							<input type="text" name="studentid" class="form-control" value="<?php echo isset($row['studentid']) ? $row['studentid'] : ''; ?>" required>
 							</div>
+=======
+                            <div class="mb-3">
+                                <label for="studentid" class="form-label">Student ID:</label>
+                                <input type="text" name="studentid" class="form-control" value="<?php echo isset($row['studentid']) ? $row['studentid'] : ''; ?>" required>
+                            </div>
+>>>>>>> 122ffcff8ce2a3a4d0ac5d185b9afd8999e1b0da
 
 
                             <div class="mb-3">

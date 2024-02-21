@@ -1,5 +1,5 @@
 .lib {
-  color: #000;
+  color: #f0cc15;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: block;
@@ -17,7 +17,7 @@
   flex-direction: column;
   gap: 35px;
   border-radius: 15px;
-  background: #820000;
+  background: #d10029;
   box-shadow: 16px 16px 32px #c8c8c8,
         -16px -16px 32px #fefefe;
   border-radius: 8px;
@@ -36,7 +36,7 @@
   padding: 10px;
   outline: none;
   border: none;
-  color: #000;
+  color: #f0cc15;
   font-size: 1em;
   background: transparent;
   border-left: 2px solid #000;
@@ -56,7 +56,7 @@
   padding: 10px;
   pointer-events: none;
   font-size: 12px;
-  color: #000;
+  color: #f0cc15;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 3px;
@@ -68,9 +68,9 @@
   transform: translateX(113px) translateY(-15px);
   font-size: 0.8em;
   padding: 5px 10px;
-  background: #000;
+  background: #f0cc15;
   letter-spacing: 0.2em;
-  color: #fff;
+  color: #f0cc15;
   border: 2px;
 }
 
@@ -81,7 +81,7 @@
   padding: 5px 10px;
   background: #000;
   letter-spacing: 0.2em;
-  color: #fff;
+  color: #f0cc15;
   border: 2px;
 }
 
@@ -89,10 +89,13 @@
 .inputBox input:focus,
 .inputBox1 input:valid,
 .inputBox1 input:focus {
-  border: 2px solid #000;
+  border: 2px solid #000; 
   border-radius: 8px;
 }
 
+label {
+color: #f0cc15;
+}
 .enter {
   height: 45px;
   width: 100px;

@@ -61,17 +61,20 @@ function executeQuery($conn, $sql, $params = []){
     }    
 }
 
+
 function displaylibraryData($conn) {
     $sql_select = "SELECT * FROM library";
     $result = executeQuery($conn, $sql_select);
     $Count = 11;
 
     if ($result->num_rows > 0) {
+        echo "<center>";
         echo "<br>";
         echo "<br>";
         echo "<br>";
-        echo "<div style='text-align: center;'>";
-        echo "<table border='1' style='margin: 0 auto;'>";
+        echo "<div class='container'>";
+        echo "<div class='card'>";
+        echo "<table class='library-table'>";
         echo "<thead>";
         echo "<tr>
                 <th>Increment</th>
@@ -93,19 +96,17 @@ function displaylibraryData($conn) {
             echo "<td>" . $row["booktitle"] . "</td>";
             echo "<td>" . $row["timeco"] . "</td>";
             echo "<td>";
-            echo "<div style='display: inline-block;'>";
+            echo "<div class='button-container'>";
             echo "<form action='update-library.php' method='get'>";
             echo "<input type='hidden' name='studentname' value='" . $row["studentname"] . "'>";
             echo "<input type='hidden' name='studentid' value='" . $row["studentid"] . "'>";
             echo "<input type='hidden' name='booktitle' value='" . $row["booktitle"] . "'>";
             echo "<input type='hidden' name='timeco' value='" . $row["timeco"] . "'>";
-            echo "<input type='submit' value='Update' style='background-color: #007bff; color: #ffffff; border: none; padding: 8px 17px; border-radius: 4px; cursor: pointer;'>";
+            echo "<input type='submit' value='Update' class='update-button'>";
             echo "</form>";
-            echo "</div>";
-            echo "<div style='display: inline-block;'>";
             echo "<form method='GET' action='delete-library.php'>";
             echo "<input type='hidden' name='studentname' value='" . $row["studentname"] . "'>";
-            echo "<input type='submit' value='Delete' style='background-color: #dc3545; color: #ffffff; border: none; padding: 8px 19px; border-radius: 5px; cursor: pointer;'>";
+            echo "<input type='submit' value='Delete' class='delete-button'>";
             echo "</form>";
             echo "</div>";
             echo "</td>";
@@ -115,10 +116,16 @@ function displaylibraryData($conn) {
         echo "</tbody>";
         echo "</table>";
         echo "</div>";
+        echo "</div>";
     } else {
-        echo "<div style='text-align: center;'>";
+        echo "<div class='container'>";
+        echo "<div class='card'>";
+        echo "<div class='no-records'>";
         echo "No records found.";
         echo "</div>";
+        echo "</div>";
+        echo "</div>";
+        echo "</center>";
     }
 }
 ?>

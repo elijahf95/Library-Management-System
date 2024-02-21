@@ -46,6 +46,19 @@ $conn->close();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="logo"></div>
+<style>
+body {
+  background-image: url('library-with-books.jpg');
+  background-size: 100%; /* or 'cover' or '100% 100%', depending on your preference */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+</style>
+<br>
+<br>
+<br>
     <center>
     <div class="container">
         <div class="card">

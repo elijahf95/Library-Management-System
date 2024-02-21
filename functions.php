@@ -1,3 +1,4 @@
+
 <?php
 
 function connectToDatabase(){
@@ -66,13 +67,17 @@ function displaylibraryData($conn) {
     $Count = 11;
 
     if ($result->num_rows > 0) {
-        echo "<table border='1'>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<div style='text-align: center;'>";
+        echo "<table border='1' style='margin: 0 auto;'>";
         echo "<thead>";
         echo "<tr>
                 <th>Increment</th>
                 <th>Student Name</th>
                 <th>Student ID</th>
-                <th>Last Name</th>
+                <th>Book Title</th>
                 <th>Date and Time</th>
                 <th>Action</th>
               </tr>";
@@ -109,8 +114,11 @@ function displaylibraryData($conn) {
         }
         echo "</tbody>";
         echo "</table>";
+        echo "</div>";
     } else {
+        echo "<div style='text-align: center;'>";
         echo "No records found.";
+        echo "</div>";
     }
 }
 ?>

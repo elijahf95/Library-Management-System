@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <style>
+body {
+  background-image: url('library-with-books.jpg');
+  background-size: 100%; /* or 'cover' or '100% 100%', depending on your preference */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+</style>
+    <center>
 <div class="container">
     <div class="card">
         <a class="lib"> Library Management System</a>
@@ -35,6 +45,7 @@
         </div>
     </div>
 </div>
+</center>
 
 
     <!-- JavaScript for client-side validation -->

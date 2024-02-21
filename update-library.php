@@ -46,23 +46,30 @@ $conn->close();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <center>
     <div class="container">
-        <h1>Update Record</h1>
+        <div class="card">
+        <a class="lib">Update Record</a>
+        <div class="inputBox1">
         <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . '?studentname=' . urlencode($studentname); ?>" method="POST">
             <div class="form-group">
-                <label for="studentname">Student Name:</label>
+                
                 <input name="studentname" class="input" type="text" id="studentname" value="<?php echo $row['studentname']; ?>" required>
+                <span class= "user"for="studentname">Student Name:</span>
             </div>
             <div class="form-group">
-                <label for="booktitle">Book Title/ID:</label>
                 <input name="booktitle" class="input" type="text" id="booktitle" value="<?php echo $row['booktitle']; ?>" required>
+                <span for="booktitle">Book Title/ID:</span>
             </div>
             <div class="form-group">
                 <label for="timeco">Date and Time:</label>
                 <input name="timeco" class="input" type="datetime-local" id="timeco" value="<?php echo date('Y-m-d\TH:i', strtotime($row['timeco'])); ?>" required>
             </div>
-            <button type="submit">Update</button>
+            <center>
+            <button type="submit" class="enter">Update</button>
+        </center>
         </form>
     </div>
+</center>
 </body>
 </html>

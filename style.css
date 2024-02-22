@@ -28,7 +28,7 @@
   justify-content: center;
   align-items: center;
   min-height: 350px;
-  width: 600px;
+  width: 700px;
   flex-direction: column;
   gap: 35px;
   border-radius: 15px;
@@ -111,6 +111,7 @@
 label {
 color: #f0cc15;
 }
+
 .enter {
   height: 45px;
   width: 100px;
@@ -130,25 +131,29 @@ color: #f0cc15;
   color: white;
 }
 
+/* Add or update styles for better alignment */
+.table-container {
+    margin-top: 20px;
+}
+
 .library-table {
-    width: 150%;
+    width: 500px;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 .library-table th, .library-table td {
     font-family: Verdana, sans-serif;
     border: 1px solid #000;
     padding: 8px;
-    color:#f0cc15;
     text-align: center;
-    background: #d10029;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
 }
 
 .button-container {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 
 .update-button, .delete-button {

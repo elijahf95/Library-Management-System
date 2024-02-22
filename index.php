@@ -71,8 +71,20 @@ body {
                 event.preventDefault(); // Prevent form submission if validation fails
             }
         });
-    </script>
+    </script>  
 </body>
+<script>
+
+
+  function delete_student(id) {
+      if (confirm("Do you want to delete this data? ")){
+       swindow.location = "delete-library.php?id="+id;
+      }
+  }
+
+      
+</script>
+
 </html>
 <?php include "functions.php"; 
 
